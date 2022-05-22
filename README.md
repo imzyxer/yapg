@@ -11,21 +11,20 @@ Utility with zero dependencies to generate strong passwords
 ###### Yarn
 `yarn add @zyxer/yapg`
 
-## Example
+## Examples
 
-It's very easy!
+By default **yapg** doesn't require any options.
 
 ```javascript
-import { Generator } from '@zyxer/yapg';
+import Generator from '@zyxer/yapg';
 const pg = new Generator();
 console.log(pg.generate()); // Output "hEg5-RJvb-ZBcF"
 ```
 
-By default **yapg** doesn't require any options. But it's possible to pass options object to
-customize password.
+However, it's possible to pass options object to customize password.
 
 ```javascript
-import { Generator } from '@zyxer/yapg';
+import Generator from '@zyxer/yapg';
 const pg = new Generator({
   numbers: true,
   uppercase: true,
@@ -36,3 +35,17 @@ const pg = new Generator({
 });
 console.log(pg.generate()); // Output "hEg5RJvbZB"
 ```
+
+## Options
+
+| Name      | Type    | Default | Description                                                                                                                                                        |
+|-----------|---------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| numbers   | boolean | `true`  | Enable/disable numbers                                                                                                                                             |
+| uppercase | boolean | `true`  | Enable/disable uppercase                                                                                                                                           |
+| lowercase | boolean | `true`  | Enable/disable lowercase                                                                                                                                           |
+| symbols   | boolean | `false` | Enable/disable symbols                                                                                                                                             |
+| length    | integer | `12`    | Password length (does not take into account split into groups)                                                                                                     |
+| group     | string  | `4`     | Split the received password into groups using dash character (If 0 then there is no division into groups, otherwise this is the number of characters in the group) |
+
+## License
+[MIT LICENSE](https://github.com/imzyxer/yapg/blob/master/LICENSE)
