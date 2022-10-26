@@ -1,6 +1,6 @@
 {
   "name": "@zyxer/yapg",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Yet another password generator",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -17,6 +17,13 @@
     "type": "git",
     "url": "https://github.com/imzyxer/yapg"
   },
+  "keywords": [
+    "generate",
+    "password",
+    "generator",
+    "unique",
+    "pass"
+  ],
   "homepage": "https://github.com/imzyxer/yapg",
   "license": "MIT",
   "devDependencies": {
